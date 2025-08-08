@@ -1,0 +1,98 @@
+/*
+Theme Name: ProbEM Theme
+Theme URI: https://probem.org/
+Author: Gemini
+Author URI: https://gemini.google.com/
+Description: Tema customizado para o Instituto ProbEM de Curitiba.
+Version: 1.0.0
+Text Domain: probem
+*/
+
+/* Variáveis de Cores e Fontes */
+:root {
+    --color-cianobr: #3BEFE3;
+    --color-laranja: #FF572C;
+    --color-preto: #232323;
+    --color-branco: #FDFDFD;
+    --color-powderblue: #A9E4E1;
+    --color-lightsalmon: #FFAB91;
+    --color-darkslategray: #495057;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* Estilos Globais */
+html, body { margin: 0; padding: 0; font-family: var(--font-primary); color: var(--color-preto); background-color: var(--color-branco); }
+a { color: var(--color-cianobr); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--color-laranja); }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; color: var(--color-preto); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header { background-color: var(--color-branco); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.logo img { max-height: 50px; }
+.main-navigation ul { margin: 0; padding: 0; list-style: none; display: flex; }
+.main-navigation li { margin: 0 15px; }
+.main-navigation a { color: var(--color-preto); font-weight: 700; }
+.main-navigation a:hover { color: var(--color-cianobr); }
+.cta-button { background-color: var(--color-laranja); color: var(--color-branco); padding: 10px 20px; border-radius: 5px; font-weight: 700; }
+.cta-doe-lateral { position: fixed; right: 0; top: 50%; transform: translateY(-50%) rotate(-90deg); background-color: var(--color-laranja); color: var(--color-branco); padding: 10px 20px; border-top-left-radius: 5px; border-top-right-radius: 5px; font-weight: 700; text-transform: uppercase; z-index: 1001; }
+
+/* Estilos da Home Page */
+.home-banner { padding: 100px 0; }
+.banner-content { display: flex; align-items: center; gap: 50px; }
+.banner-text { flex: 1; }
+.banner-title { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; color: var(--color-preto); }
+.banner-subtitle { font-size: 1.2rem; color: var(--color-darkslategray); }
+.banner-image-container { flex: 1; text-align: right; }
+.banner-image { max-width: 100%; height: auto; border-radius: 10px; }
+
+.home-o-que-e { padding: 80px 0; text-align: center; }
+.home-o-que-e h2 { font-size: 2rem; margin-bottom: 20px; }
+
+.home-missao { padding: 80px 0; }
+.missao-content { display: flex; align-items: center; gap: 50px; }
+.missao-text, .missao-image { flex: 1; }
+.missao-image img { width: 100%; height: auto; border-radius: 10px; }
+
+.home-como-ajudamos { padding: 80px 0; text-align: center; }
+.servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+.servico-item { padding: 30px; background-color: var(--color-powderblue); border-radius: 10px; }
+.servico-item i { font-size: 3rem; color: var(--color-cianobr); margin-bottom: 15px; }
+
+.home-blog { padding: 80px 0; text-align: center; }
+.blog-title { font-size: 2rem; margin-bottom: 50px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.blog-card { background-color: var(--color-branco); border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden; text-align: left; transition: transform 0.3s ease; }
+.blog-card:hover { transform: translateY(-5px); }
+.blog-card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; }
+.card-content h3 a { color: var(--color-preto); font-size: 1.2rem; margin-bottom: 10px; display: block; }
+.card-content .post-date { color: var(--color-darkslategray); font-size: 0.9rem; margin-bottom: 10px; }
+.link-saibamais { color: var(--color-laranja); text-decoration: underline; }
+.blog-cta { margin-top: 50px; }
+
+/* Estilos do Post Individual e Arquivo */
+.blog-archive-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+.blog-archive-grid { grid-template-columns: repeat(3, 1fr); }
+.single-post-container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
+.entry-header { text-align: center; margin-bottom: 30px; }
+.entry-title { font-size: 2.5rem; margin-bottom: 10px; }
+.entry-meta { font-size: 0.9rem; color: var(--color-darkslategray); margin-bottom: 20px; }
+.post-thumbnail img { width: 100%; height: auto; border-radius: 10px; }
+.entry-content { line-height: 1.8; color: var(--color-preto); }
+.tags-links { margin-top: 30px; font-style: italic; color: var(--color-darkslategray); }
+.tags-links a { background-color: var(--color-powderblue); padding: 5px 10px; border-radius: 5px; color: var(--color-darkslategray); transition: background-color 0.3s ease; }
+.tags-links a:hover { background-color: var(--color-cianobr); color: var(--color-branco); }
+.navigation.pagination { text-align: center; margin-top: 40px; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .main-navigation ul { flex-direction: column; text-align: center; }
+    .quem-somos-container, .banner-content, .missao-content { flex-direction: column; }
+    .banner-text, .missao-image { text-align: center; }
+    .banner-image-container { order: -1; }
+    .servicos-grid, .blog-grid { grid-template-columns: 1fr; }
+    .cta-doe-lateral { top: auto; bottom: 20px; right: 20px; transform: none; writing-mode: horizontal-tb; border-radius: 50px; padding: 15px 30px; }
+}
